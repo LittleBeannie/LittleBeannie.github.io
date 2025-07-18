@@ -219,3 +219,12 @@ footer {
         padding: 2rem;
     }
 }
+
+<style>
+  #intro div p {
+    margin-bottom: 1.5rem;
+  }
+  #intro div p:last-child {
+    margin-bottom: 0; /* Remove margin after last paragraph */
+  }
+</style>

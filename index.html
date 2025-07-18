@@ -1,91 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emily - Statistician</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name - Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #005f99;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    nav button:hover, nav button.active {
+      background: #004d80;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      min-height: 300px;
+    }
+    section {
+      display: none;
+      padding: 1rem 2rem;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #007acc;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Emily</h1>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#publications">Publications</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Yujie Zhao</h1>
+  </header>
+  <nav>
+    <button class="tab-button active" data-tab="intro">About me</button>
+    <button class="tab-button" data-tab="publication">Publication</button>
+    <button class="tab-button" data-tab="software">Software</button>
+  </nav>
+  <main>
+    <!-- Introduction section -->
+    <section id="intro" class="active">
+  <h2>About Me</h2>
+  <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: nowrap;">
+    <img src="profile_picture.jpg" alt="Your Name" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;" />
+    <div style="flex: 1;">
+      <p>I am currently a Biostatistician in the Methodology Research group at Merck & Co., Inc. My research is related to design and analysis in clinical trials, particularly group sequential designs under non-proportional hazards.</p>
+      <p>Previously, I obtained my Ph.D. degree in Industrial Engineering from the Georgia Institute of Technology in 2021, advised by Dr. Yajun Mei and Dr. Xiaoming Huo.  My Ph.D. research interest is hot-spots detection in spatio-temporal data, statistical computation, and identification in partial differential equations.</p>
+      <p>Before joining Georgia Tech, I got my B.S. degree in East China Normal University majoring in Statistics in 2017.</p>
+    </div>
+  </div>
+  </section>
+    <!-- Publication section -->
+    <section id="publication">
+      <h2>Publication</h2>
+      <ul>
+        <!-- Publication 1 -->
+        <li>D. Montani, V. V McLaughlin, J S. R Gibbs, M. Gomberg-Maitland, M. M Hoeper, I. R Preston, R. Souza, A. B Waxman, P. Escribano Subias, J. Feldman, G. M Meyer, K. M Olsson, F. Coulet, S. Manimaran, <strong>Y. Zhao</strong>, A. Lau, J. de Oliveira Pena, D. B Badesch, M. Humbert. 
+      "<a href="https://www.atsjournals.org/doi/epdf/10.1164/rccm.202409-1698OC?role=tab" target="_blank" rel="noopener noreferrer">Consistent Safety and Efficacy of Sotatercept for Pulmonary Arterial Hypertension in BMPR2 Mutation Carriers and Noncarriers: A Planned Analysis of Phase 2, Double-Blind, Placebo-controlled Clinical Trial (PULSAR)</a>." 
+      <span class="journal">American Journal of Respiratory and Critical Care Medicine</span>, 2025.</li>
+        <!-- Publication 1 -->
+        <li>Adjusted Inference for Multiple Testing Procedures in Group sequential designs. Biometrical journal (2025).
+        <strong>Y. Zhao</strong>, Q. Liu, L. Sun, K. Anderson.
+      "<a href="https://onlinelibrary.wiley.com/doi/10.1002/bimj.70020?__cf_chl_rt_tk=KeCLTtu3M84_mSaZnCB4N2Vt5OE8_6IKTkwiNStj3uw-1752862744-1.0.1.1-ARbwM4mEnIUSfMAXdShELpx5er4M.pDaXMgu0F6I2dM" target="_blank" rel="noopener noreferrer">Adjusted Inference for Multiple Testing Procedures in Group sequential designs</a>." 
+      <span class="journal">Biometrical journal</span>, 2025.</li>
+      </ul>
+    </section>
+    <!-- Software section -->
+    <section id="software">
+    <h2>Software</h2>
 
-    <main>
-        <!-- Introduction Panel -->
-        <section id="introduction" class="panel">
-            <h2>Introduction</h2>
-            <div class="content">
-                <img src="profile-photo.jpg" alt="Emily's profile photo" class="profile-photo">
-                <div class="intro-text">
-                    <h3>Welcome to my professional website</h3>
-                    <p>I am Emily, a passionate statistician with expertise in [your specializations]. 
-                    I specialize in [specific areas like data analysis, biostatistics, econometrics, etc.].</p>
-                    
-                    <h4>Education</h4>
-                    <ul>
-                        <li>[Your degree] - [University] ([Year])</li>
-                        <li>[Another degree if applicable]</li>
-                    </ul>
-                    
-                    <h4>Current Position</h4>
-                    <p>[Your current job title] at [Organization]</p>
-                    
-                    <h4>Research Interests</h4>
-                    <ul>
-                        <li>[Interest 1]</li>
-                        <li>[Interest 2]</li>
-                        <li>[Interest 3]</li>
-                    </ul>
-                    
-                    <h4>Contact</h4>
-                    <p>Email: [your-email@example.com]</p>
-                    <p>LinkedIn: <a href="[your-linkedin-url]">[Your LinkedIn]</a></p>
-                </div>
-            </div>
-        </section>
+    <div id="Clinical trial designs and simulations" style="margin-bottom: 2rem;">
+    <h3>Clinical trial designs and simulations</h3>
+    <ul>
+      <li><strong>gsDesign2:</strong> an R package for group sequential design for non-proportional hazards and stratified designs. <a href="https://github.com/Merck/gsDesign2" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>simtrial:</strong> an R package for clinical trial simulation for time-to-event endpoints. <a href="https://github.com/Merck/simtrial" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>simtrial:</strong> an R package for weighted parametric group sequential designs. <a href="https://github.com/Merck/wpgsd" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+    </ul>
+    </div>
 
-        <!-- Publications Panel -->
-        <section id="publications" class="panel">
-            <h2>Publications</h2>
-            <div class="content">
-                <div class="publication-item">
-                    <h3>[Publication Title 1]</h3>
-                    <p class="authors"><strong>Emily [Last Name]</strong>, Co-Author Name</p>
-                    <p class="journal"><em>Journal Name</em>, Volume(Issue), Pages, Year</p>
-                    <p class="abstract">Brief description or abstract of the publication...</p>
-                    <a href="[DOI or URL]" class="publication-link">View Publication</a>
-                </div>
-                
-                <div class="publication-item">
-                    <h3>[Publication Title 2]</h3>
-                    <p class="authors"><strong>Emily [Last Name]</strong>, Co-Author Name</p>
-                    <p class="journal"><em>Journal Name</em>, Volume(Issue), Pages, Year</p>
-                    <p class="abstract">Brief description or abstract of the publication...</p>
-                    <a href="[DOI or URL]" class="publication-link">View Publication</a>
-                </div>
-                
-                <!-- Add more publications as needed -->
-                
-                <div class="coming-soon">
-                    <h3>Upcoming Publications</h3>
-                    <ul>
-                        <li>[Title] - Under review at [Journal]</li>
-                        <li>[Title] - In preparation</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div id="Clinical trial analysis">
+    <h3>Clinical trial analysis</h3>
+    <ul>
+      <li><strong>metalite:</strong> an R package to create metadata structure for ADaM data analysis and reporting. <a href="https://github.com/Merck/metalite" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>metalite.ae:</strong> an R package for standard adverse events analysis. <a href="https://github.com/Merck/metalite.ae" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>metalite.sl:</strong> an R package for standard subject-level analysis. <a href="https://github.com/Merck/metalite.sl" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>forestly:</strong> an R package for interactive forest plots of adverse events (AE). <a href="https://github.com/Merck/forestly" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>boxly:</strong> an R package for interactive box plots in clinical trial analysis. <a href="https://github.com/Merck/boxly" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+      <li><strong>kmcurvely:</strong> an R package for interactive Kaplan-Meier plots in clinical trial analysis. <a href="https://github.com/MSDLLCpapers/kmcurvely" target="_blank" rel="noopener noreferrer">GitHub link</a>.</li>
+    </ul>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Emily. All rights reserved.</p>
-    </footer>
+    <!-- Set the color showing the jounal of my publications -->
+    <style>
+    .journal {
+    color: #007acc; /* Blue color, you can change this */
+    font-style: italic; /* Optional: italicize journal names */
+    }
+</style>
+  </main>
+  <footer>
+    &copy; 2025 Yujie Zhao
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const sections = document.querySelectorAll('main section');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and sections
+        buttons.forEach(btn => btn.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding section
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
